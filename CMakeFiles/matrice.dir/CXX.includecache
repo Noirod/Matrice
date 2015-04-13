@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
+/home/thomas/Matrice/src/Matrice.cpp
+Matrice.hpp
+/home/thomas/Matrice/src/Matrice.hpp
+
+/home/thomas/Matrice/src/Matrice.hpp
+iostream
+-
+
 /home/thomas/Matrice/src/main.cpp
 iostream
 -
+Matrice.hpp
+/home/thomas/Matrice/src/Matrice.hpp
 

@@ -115,6 +115,21 @@ matrice/fast:
 .PHONY : matrice/fast
 
 # target to build an object file
+src/Matrice.o:
+	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/Matrice.o
+.PHONY : src/Matrice.o
+
+# target to preprocess a source file
+src/Matrice.i:
+	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/Matrice.i
+.PHONY : src/Matrice.i
+
+# target to generate assembly for a file
+src/Matrice.s:
+	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/Matrice.s
+.PHONY : src/Matrice.s
+
+# target to build an object file
 src/main.o:
 	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/main.o
 .PHONY : src/main.o
@@ -138,6 +153,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... matrice"
+	@echo "... src/Matrice.o"
+	@echo "... src/Matrice.i"
+	@echo "... src/Matrice.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
