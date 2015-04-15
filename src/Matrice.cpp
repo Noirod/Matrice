@@ -61,7 +61,22 @@ Matrice & Matrice::add ( float k ) {
 }
 
 Matrice & Matrice::prod ( Matrice mat ) {
-
+	Matrice * res = new Matrice;
+	if ( ( _n > 0 ) && ( _m > 0 ) ) {
+		if ( ( mat._n > 0) && ( mat._m > 0 ) ) { //les matrices existent
+			if ( _m == mat._n ) { //le produit est possible
+				res->creer ( _n, mat._m );
+				for ( unsigned int i = 0; i < _n; i++ ) {
+					for ( unsigned int j = 0; j < mat._n; j++ ) {
+						for ( unsigned int k = 0; k < _m; k++ ) {
+							res->_mat[i][j] += _mat[i][k] * mat._mat[k][j]; 
+						}
+					}
+				}
+			}
+		}
+	}
+	return *res;
 }
 
 Matrice & Matrice::prod ( float k ) {

@@ -10,8 +10,12 @@ int main ( int argc, char ** argv ) {
 	Matrice m4 ( "matrice.txt" );
 
 	cout << "M4 :" << endl << m4 << endl;
-	m4 = m4.transpose ();
-	cout << "tM4 :" << endl << m4 << endl;
+	m3 = m4.transpose ();
+	cout << "tM4 :" << endl << m3 << endl;
+
+	Matrice m5;
+	m5 = m4.prod ( m3 );
+	cout << "M5 :" << endl << m5 << endl;
 
 	m4.save ( "t_matrice.txt" );
 
