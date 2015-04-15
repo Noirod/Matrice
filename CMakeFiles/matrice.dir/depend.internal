@@ -4,11 +4,16 @@
 CMakeFiles/matrice.dir/src/Matrice.o
  /home/thomas/Matrice/src/Matrice.cpp
  /home/thomas/Matrice/src/Matrice.hpp
+CMakeFiles/matrice.dir/src/MatriceCarree.o
+ /home/thomas/Matrice/src/Matrice.hpp
+ /home/thomas/Matrice/src/MatriceCarree.cpp
+ /home/thomas/Matrice/src/MatriceCarree.hpp
 CMakeFiles/matrice.dir/src/Vecteur.o
  /home/thomas/Matrice/src/Matrice.hpp
  /home/thomas/Matrice/src/Vecteur.cpp
  /home/thomas/Matrice/src/Vecteur.hpp
 CMakeFiles/matrice.dir/src/main.o
  /home/thomas/Matrice/src/Matrice.hpp
+ /home/thomas/Matrice/src/MatriceCarree.hpp
  /home/thomas/Matrice/src/Vecteur.hpp
  /home/thomas/Matrice/src/main.cpp

@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Vecteur.hpp"
+#include "Matrice.hpp"
+#include "MatriceCarree.hpp"
 
 using namespace std;
 
@@ -41,7 +43,7 @@ int main ( int argc, char ** argv ) {
 	m3 = m3.transpose ();
 	cout << "tM3 :" << endl << m3 << endl;
 	*/
-
+/*
 	Vecteur v1 ( 5 );
 	Vecteur v2 ( 5 );
 
@@ -58,6 +60,11 @@ int main ( int argc, char ** argv ) {
 
 	cout << "V1.V2: " << v1.prodScal ( v2 ) << endl;
 	cout << "||V1||: " << v1.norme () << endl; 	
+*/
+
+	MatriceCarree mc1 ( 10 );
+
+	cout << mc1 << endl;
 
 	return 0; 
 }

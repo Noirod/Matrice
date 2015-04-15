@@ -16,6 +16,16 @@ iostream
 fstream
 -
 
+/home/thomas/Matrice/src/MatriceCarree.cpp
+MatriceCarree.hpp
+/home/thomas/Matrice/src/MatriceCarree.hpp
+
+/home/thomas/Matrice/src/MatriceCarree.hpp
+iostream
+-
+Matrice.hpp
+/home/thomas/Matrice/src/Matrice.hpp
+
 /home/thomas/Matrice/src/Vecteur.cpp
 Vecteur.hpp
 /home/thomas/Matrice/src/Vecteur.hpp
@@ -33,4 +43,8 @@ iostream
 -
 Vecteur.hpp
 /home/thomas/Matrice/src/Vecteur.hpp
+Matrice.hpp
+/home/thomas/Matrice/src/Matrice.hpp
+MatriceCarree.hpp
+/home/thomas/Matrice/src/MatriceCarree.hpp
 
