@@ -13,6 +13,8 @@ Matrice.hpp
 /home/thomas/Matrice/src/Matrice.hpp
 iostream
 -
+fstream
+-
 
 /home/thomas/Matrice/src/main.cpp
 iostream

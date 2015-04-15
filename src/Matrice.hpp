@@ -2,6 +2,7 @@
 #define MATRICE_HPP
 
 #include <iostream>
+#include <fstream>
 
 class Matrice {
 
@@ -21,11 +22,11 @@ public:
 
 	void setElement ( float k, unsigned int i, unsigned int j );
 	
-	Matrice add ( Matrice mat );
+	Matrice & add ( Matrice mat );
 	Matrice & add ( float k );	
-	Matrice prod ( Matrice mat );
-	Matrice prod ( float k );
-	Matrice transpose ();
+	Matrice & prod ( Matrice mat );
+	Matrice & prod ( float k );
+	Matrice & transpose ();
 	
 	bool save ( const char * pathname );
 

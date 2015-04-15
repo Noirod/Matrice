@@ -6,7 +6,19 @@ Matrice::Matrice () {
 }
 
 Matrice::Matrice ( const char * pathname ) {
-
+	std::ifstream file ( pathname );
+	_n = 0;
+	_m = 0;
+	if ( file ) { //fichier trouve
+		unsigned int n, m;
+		file >> n >> m;
+		this->creer ( n, m );
+		for ( unsigned int i = 0; i < n; i++ ) {
+			for ( unsigned int j = 0; j < m; j++ ) {
+				file >> _mat [i][j];
+			}
+		}
+	}
 }
 
 Matrice::Matrice ( unsigned int n, unsigned int m ) {
@@ -19,19 +31,19 @@ Matrice::~Matrice () {
 	this->detruire ();
 }
 
-Matrice Matrice::add ( Matrice mat ) {
-	Matrice res;
+Matrice & Matrice::add ( Matrice mat ) {
+	Matrice * res = new Matrice;
 	if ( ( _n > 0 ) && ( _m > 0 ) ) { //la matrice existe
 		if ( ( _n == mat._n ) && ( _m == mat._m ) ) { //les matrices ont la meme taille
-			res.creer ( _n, _m );
+			res->creer ( _n, _m );
 			for ( unsigned int i = 0; i < _n; i++ ) {
 				for ( unsigned int j = 0; j < _m; j++ ) {
-					res._mat[i][j] = _mat[i][j] + mat._mat[i][j];			
+					res->_mat[i][j] = _mat[i][j] + mat._mat[i][j];			
 				}
 			}
 		}
 	}
-	return res;	
+	return *res;	
 }
 
 Matrice & Matrice::add ( float k ) {
@@ -48,35 +60,50 @@ Matrice & Matrice::add ( float k ) {
 	return *res;
 }
 
-Matrice Matrice::prod ( Matrice mat ) {
+Matrice & Matrice::prod ( Matrice mat ) {
 
 }
 
-Matrice Matrice::prod ( float k ) {
-	Matrice res;
+Matrice & Matrice::prod ( float k ) {
+	Matrice * res = new Matrice;
 	if ( ( _n > 0 ) && ( _m > 0 ) ) { //la matrice existe
-		res.creer ( _n, _m );
+		res->creer ( _n, _m );
 		for ( unsigned int i = 0; i < _n; i++ ) {
 			for ( unsigned int j = 0; j < _m; j++ ) {
-				res._mat[i][j] = _mat[i][j] * k;
+				res->_mat[i][j] = _mat[i][j] * k;
 			}
 		}
 	}
+	return *res;
 }
 
-Matrice Matrice::transpose () {
-	/*Matrice res;
+Matrice & Matrice::transpose () {
+	Matrice * res = new Matrice;
 	if ( ( _n > 0 ) && ( _m > 0 ) ) { //la matrice existe
-		for ( unsigned int i = 0; i < _n; i++ ) {
-			for ( unsigned int j = i + 1; j < _m; j++ ) {
-				
+		res->creer ( _m, _n ); // matrice ou on inverse les dimensions
+		for ( unsigned int i = 0; i < _m; i++ ) {
+			for ( unsigned int j = 0; j < _n; j++ ) {
+				res->_mat[i][j] = _mat[j][i];	
 			}
 		}		
-	}*/
+	}
+	
+	return *res;
+
 }
 
 bool Matrice::save ( const char * pathname ) {
-
+	std::ofstream file ( pathname );
+	if ( file ) {
+		file << _n << " " << _m;
+		file << std::endl;
+		for ( unsigned int i = 0; i < _n; i++ ) {
+			for ( unsigned int j = 0; j < _m; j++ ) {
+				file << _mat[i][j] << " ";
+			}
+			file << std::endl;
+		}
+	}
 }
 
 void Matrice::creer ( unsigned int n, unsigned int m ) {
