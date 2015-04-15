@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Matrice.hpp"
+#include "Vecteur.hpp"
 
 using namespace std;
 
 int main ( int argc, char ** argv ) {
-	Matrice m1 ( 6, 5 );
+	/*Matrice m1 ( 6, 5 );
 	Matrice m2 ( 6, 5 );
 	Matrice m3;
 	Matrice m4 ( "matrice.txt" );
@@ -40,6 +40,24 @@ int main ( int argc, char ** argv ) {
 
 	m3 = m3.transpose ();
 	cout << "tM3 :" << endl << m3 << endl;
+	*/
+
+	Vecteur v1 ( 5 );
+	Vecteur v2 ( 5 );
+
+	v1.setElement ( 1, 0, 0 );
+	v1.setElement ( 41, 1, 0 );
+	v1.setElement ( 69, 2, 0 );
+
+	v2.setElement ( 9, 0, 0 );
+	v2.setElement ( 6, 1, 0 );
+	v2.setElement ( 65, 2, 0 );
+
+	cout << "V1 :" << endl << v1 << endl;
+	cout << "V2 :" << endl << v2 << endl;
+
+	cout << "V1.V2: " << v1.prodScal ( v2 ) << endl;
+	cout << "||V1||: " << v1.norme () << endl; 	
 
 	return 0; 
 }

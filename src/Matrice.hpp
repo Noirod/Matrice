@@ -32,7 +32,7 @@ public:
 
 	friend std::ostream & operator<< ( std::ostream & flux, const Matrice & mat );
 
-private:
+protected:
 	unsigned int _n, _m;
 	float ** _mat;
 };

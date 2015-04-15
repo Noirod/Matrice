@@ -4,6 +4,11 @@
 CMakeFiles/matrice.dir/src/Matrice.o: src/Matrice.cpp
 CMakeFiles/matrice.dir/src/Matrice.o: src/Matrice.hpp
 
+CMakeFiles/matrice.dir/src/Vecteur.o: src/Matrice.hpp
+CMakeFiles/matrice.dir/src/Vecteur.o: src/Vecteur.cpp
+CMakeFiles/matrice.dir/src/Vecteur.o: src/Vecteur.hpp
+
 CMakeFiles/matrice.dir/src/main.o: src/Matrice.hpp
+CMakeFiles/matrice.dir/src/main.o: src/Vecteur.hpp
 CMakeFiles/matrice.dir/src/main.o: src/main.cpp
 

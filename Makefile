@@ -130,6 +130,21 @@ src/Matrice.s:
 .PHONY : src/Matrice.s
 
 # target to build an object file
+src/Vecteur.o:
+	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/Vecteur.o
+.PHONY : src/Vecteur.o
+
+# target to preprocess a source file
+src/Vecteur.i:
+	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/Vecteur.i
+.PHONY : src/Vecteur.i
+
+# target to generate assembly for a file
+src/Vecteur.s:
+	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/Vecteur.s
+.PHONY : src/Vecteur.s
+
+# target to build an object file
 src/main.o:
 	$(MAKE) -f CMakeFiles/matrice.dir/build.make CMakeFiles/matrice.dir/src/main.o
 .PHONY : src/main.o
@@ -156,6 +171,9 @@ help:
 	@echo "... src/Matrice.o"
 	@echo "... src/Matrice.i"
 	@echo "... src/Matrice.s"
+	@echo "... src/Vecteur.o"
+	@echo "... src/Vecteur.i"
+	@echo "... src/Vecteur.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

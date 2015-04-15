@@ -16,9 +16,21 @@ iostream
 fstream
 -
 
-/home/thomas/Matrice/src/main.cpp
+/home/thomas/Matrice/src/Vecteur.cpp
+Vecteur.hpp
+/home/thomas/Matrice/src/Vecteur.hpp
+
+/home/thomas/Matrice/src/Vecteur.hpp
+math.h
+-
 iostream
 -
 Matrice.hpp
 /home/thomas/Matrice/src/Matrice.hpp
+
+/home/thomas/Matrice/src/main.cpp
+iostream
+-
+Vecteur.hpp
+/home/thomas/Matrice/src/Vecteur.hpp
 
