@@ -11,7 +11,7 @@ int main ( int argc, char ** argv ) {
 	cout << "M1 :" << endl << m1 << endl;
 	cout << "M2 :" << endl << m2 << endl;
 		
-	m3 = m1.add ( m2 );
+	m3 = m1.add ( 8 );
 
 	cout << "M3 :" << endl << m3 << endl;	
 

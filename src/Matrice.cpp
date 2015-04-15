@@ -34,18 +34,18 @@ Matrice Matrice::add ( Matrice mat ) {
 	return res;	
 }
 
-Matrice Matrice::add ( float k ) {
-	Matrice res;
+Matrice & Matrice::add ( float k ) {
+	Matrice * res = new Matrice;
 	if ( ( _n > 0 ) && ( _m > 0 ) ) { //la matrice existe
-		res.creer ( _n, _m );
+		res->creer ( _n, _m );
 		for ( unsigned int i = 0; i < _n; i++ ) { 
 			for ( unsigned int j = 0; j < _m; j++ ) {
-				res._mat[i][j] = _mat[i][j] + k; 
+				res->_mat[i][j] = _mat[i][j] + k; 
 			}
 		}
 
-	} 
-	return res;
+	}
+	return *res;
 }
 
 Matrice Matrice::prod ( Matrice mat ) {
@@ -145,15 +145,3 @@ std::ostream & operator<< ( std::ostream & flux, const Matrice & mat ) {
 
 	return flux;
 }
-
-Matrice & Matrice::operator= ( const Matrice & mat ) {
-	if ( ( mat._n > 0 ) && ( mat._m > 0 ) ) {
-		this->creer ( mat._n, mat._m );
-		for ( unsigned int i = 0; i < _n; i++ ) {
-			for ( unsigned int j = 0; j < _m; j++ ) {
-				_mat[i][j] = mat._mat[i][j];
-			} 
-		}
-		return *this;	
-	}
-}	
