@@ -22,9 +22,9 @@ public:
 
 	void setElement ( float k, unsigned int i, unsigned int j );
 
-	Matrice add ( Matrice & mat );
+	Matrice add ( const Matrice & mat );
 	Matrice add ( float k );
-	Matrice prod ( Matrice & mat );
+	Matrice prod ( const Matrice & mat );
 	Matrice prod ( float k );
 	Matrice transpose ();
 
@@ -32,6 +32,10 @@ public:
 
 	friend std::ostream & operator<< ( std::ostream & flux, const Matrice & mat );
 	void operator= ( const Matrice & mat );
+	Matrice operator+ ( const Matrice & mat );
+	Matrice operator+ ( float k );
+	Matrice operator* ( const Matrice & mat );
+	Matrice operator* ( float k );
 
 protected:
 	unsigned int _n, _m;

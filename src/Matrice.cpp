@@ -32,7 +32,7 @@ Matrice::~Matrice () {
 	this->detruire ();
 }
 
-Matrice Matrice::add ( Matrice & mat ) {
+Matrice Matrice::add ( const Matrice & mat ) {
 	Matrice res;
 	if ( ( _n > 0 ) && ( _m > 0 ) ) { //la matrice existe
 		if ( ( _n == mat._n ) && ( _m == mat._m ) ) { //les matrices ont la meme taille
@@ -62,7 +62,7 @@ Matrice Matrice::add ( float k ) {
 	return res;
 }
 
-Matrice Matrice::prod ( Matrice & mat ) {
+Matrice Matrice::prod ( const Matrice & mat ) {
 	Matrice res;
 	if ( ( _n > 0 ) && ( _m > 0 ) ) {
 		if ( ( mat._n > 0) && ( mat._m > 0 ) ) { //les matrices existent
@@ -199,4 +199,20 @@ void Matrice::operator= ( const Matrice & mat ) {
         	}
 	}
 
+}
+
+Matrice Matrice::operator+ ( const Matrice & mat ) {
+	return this->add ( mat );
+}
+
+Matrice Matrice::operator+ ( float k ) {
+	return this->add ( k );
+}
+
+Matrice Matrice::operator* ( const Matrice & mat ) {
+	return this->prod ( mat );
+}
+
+Matrice Matrice::operator* ( float k ) {
+	return this->prod ( k ); 
 }

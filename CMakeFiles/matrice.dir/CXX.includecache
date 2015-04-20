@@ -23,6 +23,8 @@ MatriceCarree.hpp
 /home/thomas/Matrice/src/MatriceCarree.hpp
 iostream
 -
+fstream
+-
 Matrice.hpp
 /home/thomas/Matrice/src/Matrice.hpp
 
